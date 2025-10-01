@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from database import Base, engine
-from routers import chatbot, clients
+from .database import Base, engine
+from .routers import chatbot, clients
 
 # Cria as tabelas no banco
 Base.metadata.create_all(bind=engine)

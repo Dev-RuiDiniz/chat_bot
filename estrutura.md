@@ -1,10 +1,11 @@
 CHAT_BOT/
-│── main.py
-│── database.py
-│── models.py
-│── schemas.py
-│── routers/
-│   ├── chatbot.py
-│   ├── clients.py
-│── services/
-│   ├── chatbot_service.py
+|--app/
+│   |── main.py
+│   |── database.py
+│   |── models.py
+│   |── schemas.py
+│   |── routers/
+│       ├── chatbot.py
+│       ├── clients.py
+│   |── services/
+│       ├── chatbot_service.py
