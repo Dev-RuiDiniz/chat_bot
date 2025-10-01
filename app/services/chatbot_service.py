@@ -1,5 +1,5 @@
 def chatbot_response(message: str) -> str:
-    """Simples lógica do chatbot (pode evoluir depois)."""
+    """Simples lógica do chatbot"""
     if "oi" in message.lower() or "olá" in message.lower():
         return "Olá! Como posso te ajudar hoje?"
     elif "cadastro" in message.lower():

@@ -5,9 +5,6 @@ class InteractionBase(BaseModel):
     message: str
     response: str
 
-class InteractionCreate(InteractionBase):
-    pass
-
 class InteractionResponse(InteractionBase):
     id: int
     class Config:

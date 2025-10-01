@@ -1,4 +1,4 @@
-chatbot_api/
+CHAT_BOT/
 │── main.py
 │── database.py
 │── models.py
