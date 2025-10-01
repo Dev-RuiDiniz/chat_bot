@@ -1,11 +1,12 @@
 from fastapi import FastAPI
-from .routes import router
+from database import Base, engine
+from routers import chatbot, clients
 
-app = FastAPI(title="Chatbot WhatsApp API", version="1.0.0")
+# Cria as tabelas no banco
+Base.metadata.create_all(bind=engine)
 
-# Inclui rotas
-app.include_router(router, prefix="/chatbot", tags=["Chatbot"])
+app = FastAPI(title="Chatbot API")
 
-@app.get("/")
-def root():
-    return {"status": "Chatbot API rodando 🚀"}
+# Inclui os módulos de rotas
+app.include_router(chatbot.router)
+app.include_router(clients.router)
