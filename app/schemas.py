@@ -11,7 +11,7 @@ class InteractionCreate(InteractionBase):
 class InteractionResponse(InteractionBase):
     id: int
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 class ClientBase(BaseModel):
     name: str
@@ -25,4 +25,4 @@ class ClientResponse(ClientBase):
     id: int
     interactions: List[InteractionResponse] = []
     class Config:
-        orm_mode = True
+        from_attributes = True
