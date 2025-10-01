@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
-from database import get_db
-from schemas import InteractionResponse
-from models import Interaction
-from services.chatbot_service import chatbot_response
+from ..database import get_db
+from ..models import Interaction
+from ..schemas import InteractionResponse
+from ..services.chatbot_service import chatbot_response
 
 router = APIRouter(prefix="/chatbot", tags=["Chatbot"])
 
